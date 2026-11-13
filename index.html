@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5e9d5">
+  <meta name="description" content="A playful one-chord ukulele activity for families.">
+  <title>One Chord, Many Smiles | Family Ukulele</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="wrap">
+    <header><span class="eyebrow">FAMILY MUSIC PLAYGROUND</span><h1>One Chord, Many Smiles 🎶</h1><p>Play open strings, try your first C chord, and record a little tune together. No ukulele needed!</p></header>
+    <section class="panel" aria-labelledby="play-title">
+      <div class="section-top"><h2 id="play-title">1. Play the strings</h2><span class="hint">Tap a string or use keys 1–4</span></div>
+      <p>Ukulele strings are tuned <strong>G – C – E – A</strong>. Tap each one to hear it.</p>
+      <div class="strings" role="group" aria-label="Virtual ukulele strings">
+        <button class="string" data-note="G4" data-key="1"><strong>G</strong><small>String 4</small></button>
+        <button class="string" data-note="C4" data-key="2"><strong>C</strong><small>String 3</small></button>
+        <button class="string" data-note="E4" data-key="3"><strong>E</strong><small>String 2</small></button>
+        <button class="string" data-note="A4" data-key="4"><strong>A</strong><small>String 1</small></button>
+      </div>
+      <div class="actions"><button id="strumOpen" class="primary">♫ Strum open strings</button><button id="strumC" class="secondary">♫ Play a C chord</button></div>
+    </section>
+    <section class="panel" aria-labelledby="chord-title">
+      <h2 id="chord-title">2. Learn one chord: C</h2>
+      <div class="chord-layout"><div class="diagram" aria-label="C chord: third fret on the A string; all other strings open"><div class="nut"></div><div class="fret fret1"></div><div class="fret fret2"></div><div class="fret fret3"></div><div class="vertical v1"></div><div class="vertical v2"></div><div class="vertical v3"></div><div class="vertical v4"></div><div class="finger"></div><div class="chord-labels"><span>G</span><span>C</span><span>E</span><span>A</span></div></div><div><p>Place one finger on the <strong>3rd fret of the A string</strong> (the string closest to the floor when holding your ukulele). Leave the other three strings open.</p><p>Then gently strum all four strings. You have played a C major chord!</p><button id="practiceC" class="secondary">Hear C again</button></div></div>
+    </section>
+    <section class="panel" aria-labelledby="record-title">
+      <h2 id="record-title">3. Record your music</h2>
+      <p>Press record, play some strings or chords, then stop and listen. Recording captures <strong>sounds played inside this app</strong>, not your voice or a real ukulele.</p>
+      <div class="actions"><button id="record" class="primary">● Start recording</button><button id="stop" class="secondary" disabled>■ Stop</button><span id="timer" aria-live="polite">00:00</span></div>
+      <p id="status" role="status">Ready when you are.</p>
+      <div id="result" hidden><audio id="playback" controls aria-label="Your recording"></audio><a id="download" class="download" download="my-ukulele-music.webm">Download recording</a></div>
+    </section>
+    <section class="panel activity"><h2>Family challenge 🌟</h2><p>One person plays G–C–E–A. Another person claps four steady beats. Then everyone plays the C chord together. What happens when you change the speed?</p></section>
+    <footer>Made for playful family music-making. Works in modern browsers. No account, tracking or uploaded recordings.</footer>
+  </main>
+</body>
+</html>
